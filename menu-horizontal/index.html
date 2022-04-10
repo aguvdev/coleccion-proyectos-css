@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Horizontal</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +14,13 @@
     <div class="mobile">
       <div class="header">
         <div class="logo">Logo</div>
-        <div class="more"><button>More</button></div>
+        <div class="more">
+          <button id="bMore">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
       </div>
-      <div class="links">
+      <div id="links" class="links">
         <a href="#">Services</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
@@ -42,8 +47,10 @@
         <a href="#">Login</a>
       </div>
 
+
+      <!-- menu conceptual -->
       <div class="secondary mini">
-        <a href="#">More</a>
+        <a href="#" class="more">More</a>
         <div class="submenu">
           <a href="#">Search</a>
           <a href="#">Sing Up</a>
@@ -53,5 +60,7 @@
     </div>
     <!-- Fin Desktop -->
   </nav>
+
+  <script src="/menu-horizontal/script.js"></script>
 </body>
 </html>
