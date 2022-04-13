@@ -11,3 +11,33 @@ table{
     width: 800px;
     margin: 100px auto;
 }
+
+thead{
+    background-color: #111;
+    color: #fff;
+    position: sticky;/* sirve para cuando se hace scroll el elemento se quede pegado en el top o donde se le indique */
+    top: 0;
+}
+
+td, th{
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+td:nth-child(n + 3),/* es para indicar a partir de que indice quiero que empiece a poner estilos, donde n es 0 y +3 es el total donde debe empezar */
+th:nth-child(n + 3){
+    text-align: center;
+}
+
+tbody tr:hover{
+    background-color: #a0dee1 !important;
+}
+
+tfoot{
+    background-color: #111;
+    color: #fff;
+}
