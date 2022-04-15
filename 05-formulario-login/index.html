@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Login Form</title>
 </head>
 <body>
-    
+    <div class="form-container">
+        <div class="login-container">
+            <h2>Bienvenido</h2>
+            <p>Selecciona el método de autenticación</p>
+
+            <form action="">
+                <!-- Username -->
+                <p>
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" id="username">
+                </p>
+
+                <!-- Password -->
+                <p>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password">
+                </p>
+
+                <!-- Recordarme -->
+                <div class="options">
+                    Recordarme <input type="checkbox" name="" id="">
+                </div>
+
+                <!-- Forgot pass -->
+                <div>
+                    <a href="#">Olvide mi contraseña</a>
+                </div>
+
+                <p>
+                    <input type="submit" class="btn btn-login" value="Iniciar Sesión"><!-- se le asigna dos btn, el primero es para tener un estilo estandard para todos los botones y el segundo (btn-login) es para los detalles específicos -->
+                </p>
+
+                <!-- Providers (proveedores) -->
+                <div class="providers">
+                    <span>O elige otro método para iniciar sesión</span>
+                    <button class="btn btn-google">Google</button>
+                    <button class="btn btn-facebook">Facebook</button>
+                    <button class="btn btn-twitter">Twitter</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Welcome section -->
+        <div class="welcome-screen-container">
+            
+        </div>
+    </div>
 </body>
 </html>
