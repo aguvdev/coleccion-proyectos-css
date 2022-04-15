@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --purpuraOsc: #845EC2;
+    --grisOscuro: #4B4453;
+    --grisClaro: #B0A8B9;
+    --verdeOscuro: #00896F;
+    --verdeClaro: #00C0A3;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--verdeClaro);
+}
+
+.form-container{
+    background-color: var(--grisOscuro);
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;/* esto es por si algun contenedor hijo se mueve, no se pierda el border-radius por el estilo del cont hijo */
+
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .login-container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-container .login-container > h2{/* esto es para seleccionar al h2 mas inmediato */
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--verdeClaro);
+}
+
+.form-container .login-container > p,
+.form-container .login-container > span{
+    text-align: center;
+    color: var(--grisClaro);
+}
+
+.form-container .login-container label{
+    display: block;
+    color: var(--verdeClaro);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.form-container .login-container input.input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;/* asi no se desborda el ancho de su contenedor */
+    padding: 5px;
+    border: solid 1px var(--grisOscuro);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .login-container input.input:focus{
+    outline: solid 3px var(--verdeClaro);
+}
+
+.form-container .login-container .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container a{
+    color: var(--purpuraOsc);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.form-container a:hover{
+    text-decoration: underline;
+}
+
+.form-container .login-container .options .recor{
+    color: var(--grisClaro);
+    font-size: 12px;
+}
+
+.form-container .login-container .providers{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+    color: var(--grisClaro);
+    font-size: 12px;
+}
+
+.btn{
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: bolder;
+    display: block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn.btn-login{
+    background-color: var(--verdeOscuro);
+    color: white;
+    transition: ease 0.2s all;
+}
+
+.btn.btn-login:hover{
+    background-color: var(--verdeClaro);
+}
+
+.btn.btn-facebook{
+    background-color: rgb(10, 82, 216);
+    color: white;
+    transition: ease 0.2s all;
+}
+
+.btn.btn-facebook:hover{
+    background-color: rgb(9, 66, 170);
+}
+
+.btn.btn-google{
+    background-color: white;
+    color: #242424;
+    transition: ease 0.2s all;
+}
+
+.btn.btn-google:hover{
+    background-color: rgb(196, 195, 195);
+}
+
+.btn.btn-twitter{
+    background-color: rgb(10, 168, 216);
+    color: white;
+    transition: ease 0.2s all;
+}
+
+.btn.btn-twitter:hover{
+    background-color: rgb(9, 134, 172);
+}
+
+.form-container .welcome-screen-container{
+    background-image: url('/05-formulario-login/dinos.png');
+    height: 100%;
+    width: 50%;
+}
+
+@media screen and (max-width: 1050px) {
+    .form-container{
+        width: 95%;
+    }
+
+    .form-container .login-container{
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form-container .welcome-screen-container{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        background-image: url('/05-formulario-login/dinos.png');
+    }
+    .form-container .welcome-screen-container{
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form-container .login-container{
+        width: 250px;
+    }
+}
