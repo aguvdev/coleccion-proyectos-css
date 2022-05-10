@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+}
+
+.slider-container {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.slider-container .slider-viewport {
+  width: 700px;
+  border-radius: 10px;
+  display: flex;
+
+  overflow-x: auto; /* aca empieza */
+  scroll-snap-type: x mandatory; /* esta propieda nos sirve para poder decir como queremos hacer que nuestro scroll se comporte cuando estamos utilizando un overflow (se pone 'x' porque es en el eje que estamos) */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* esto es para las pantallas tactiles */
+}
+
+.slider-container .slider-viewport .slide {
+  min-width: 700px;
+  width: 700px;
+  height: 400px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start; /* aca le voy a decir a donde quiero que llegue la capa cuando haga el scroll */
+}
+
+#slide1 {
+  background-color: salmon;
+}
+
+#slide2 {
+  background-color: steelblue;
+}
+
+#slide3 {
+  background-color: yellowgreen;
+}
+
+#slide4 {
+  background-color: paleturquoise;
+}
+
+#slide5 {
+  background-color: deeppink;
+}
+
+.slider-container .links {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.slider-container .links a {
+  width: 40px;
+  height: 40px;
+  background-color: #2e2e2e;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.slider-container .links a:hover {
+  background-color: #226bbe;
+}
