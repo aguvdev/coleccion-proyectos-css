@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Widget clima</title>
+  </head>
+  <body>
+    <div class="weather-container">
+      <!-- CURRENT -->
+      <div class="current">
+        <div class="city">Buenos Aires</div>
+        <div class="day">Now</div>
+        <!-- ROW -->
+        <div class="row">
+          <div class="icon">
+            <img src="/20-widget-clima/cloudy.png" width="128" alt="" />
+          </div>
+          <div class="info">
+            <!-- temperature -->
+            <div class="temperature">
+              <div class="temperature-now">20º</div>
+              <div class="temperature-low">/17º</div>
+            </div>
+
+            <!-- status -->
+            <div class="status">Partially Claudy</div>
+          </div>
+        </div>
+
+        <!-- MORE -->
+        <div class="more">
+          <!-- ITEM -->
+          <div class="item">
+            <div class="icon">
+              <span class="material-symbols"> water_drop </span>
+            </div>
+            <div class="text">
+              <div class="value">9 km/h</div>
+              <div class="type">Wind</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIST -->
+      <div class="list"></div>
+    </div>
+  </body>
+</html>
