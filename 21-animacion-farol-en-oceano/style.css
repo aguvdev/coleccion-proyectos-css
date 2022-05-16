@@ -1,0 +1,84 @@
+body{
+ background-color: #222;;
+}
+
+.scene {
+  margin: 100px auto;
+  width: 930px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.scene img {
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+}
+
+.wave {
+  position: absolute;
+  background-repeat: repeat-x;
+  background-size: 375px;
+  width: 3000px;
+  height: 180px;
+  bottom: -60px;
+  left: -50%;
+  animation: wave 8s infinite linear;
+}
+
+.wave-paint {
+  background-image: url("/21-animacion-farol-en-oceano/wave-paint.png");
+}
+
+.wave-plain {
+  background-image: url("/21-animacion-farol-en-oceano/wave-plain.png");
+}
+
+.wave:nth-child(2) {
+  bottom: 30px;
+  left: -46%;
+  animation-duration: 7s;
+}
+
+.wave:nth-child(3) {
+  bottom: -30px;
+  left: -62%;
+  animation-duration: 5s;
+}
+
+.wave:nth-child(5) {
+  bottom: -30px;
+  left: -62%;
+  animation-duration: 5s;
+}
+
+.lh {
+  width: 240px;
+  height: 240px;
+  bottom: 45px;
+  right: -180px;
+  transform-origin: bottom;
+  animation: lighthouse 4s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) translateY(5px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(5px) rotate(-360deg);
+  }
+}
+
+@keyframes lighthouse {
+  0% {
+    transform: translateX(5px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateX(-15px) rotate(-10deg);
+  }
+}
