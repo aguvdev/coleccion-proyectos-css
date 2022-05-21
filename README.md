@@ -1,2 +1,2 @@
 # coleccion-proyectos-css
-Una colección de 20 proyectos para practicar CSS. 
+Una colección de 21 proyectos para practicar CSS. 
