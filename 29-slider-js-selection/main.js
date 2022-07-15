@@ -1,24 +1,35 @@
 const imagenes = [
   {
     img: "paisajes-1.jpg",
+    title: "Gatito en el Templo",
+    desc: "Un día este gatito se hizo budista."
   },
   {
     img: "paisajes-2.jpg",
+    title: "Arte en la terraza",
+    desc: "No hay mejor inspiración que la vida misma vista desde la ventana."
   },
   {
     img: "paisajes-3.jpg",
+    title: "Festividad Nocturna",
+    desc: "Se dice que los espiritus bondadosos nos cuidan por las noches."
   },
   {
     img: "paisajes-4.jpg",
+    title: "Puente a la luna",
+    desc: "La luna es el reflejo del mismo sol, asi que es nuestro propio reflejo también."
   },
   {
     img: "paisajes-5.jpg",
+    title: "Río del cerezo",
+    desc: "Si querés que las buenas vibras se te impregnen, planta un cerezo cerca."
   },
 ];
 
 const sliderContainer = document.querySelector("#slider");
 const currentContainer = document.querySelector("#current");
 const imgContainer = document.querySelector("#mini-img-container");
+const infoContainer = document.querySelector('#info-container')
 const bNext = document.querySelector("#next");
 const bPrev = document.querySelector("#prev");
 let current = 0;
@@ -30,6 +41,7 @@ bNext.addEventListener("click", (e) => {
 
   if (current !== changed) {
     renderCurrentImg(imagenes[current].img);
+    renderCurrentTitle(imagenes[current].title , imagenes[current].desc)
     darBorde();
   }
 });
@@ -41,11 +53,13 @@ bPrev.addEventListener("click", (e) => {
 
   if (current !== changed) {
     renderCurrentImg(imagenes[current].img);
+    renderCurrentTitle(imagenes[current].title , imagenes[current].desc)
     darBorde();
   }
 });
 
 renderCurrentImg(imagenes[current].img);
+renderCurrentTitle(imagenes[current].title , imagenes[current].desc)
 renderImg();
 darBorde();
 
@@ -54,6 +68,13 @@ function renderCurrentImg(img) {
         <div class="blob">
           <img src="./img/${img}" alt="">
         </div>
+  `;
+}
+
+function renderCurrentTitle(title, desc) {
+  infoContainer.innerHTML = `
+    <h2 class="title">${title}</h2>
+    <p class="desc">${desc}</p>
   `;
 }
 
@@ -73,6 +94,7 @@ function renderImg() {
       const id = +item.getAttribute("data-id");
       current = id;
       renderCurrentImg(imagenes[current].img);
+      renderCurrentTitle(imagenes[current].title , imagenes[current].desc)
       darBorde();
     });
   });
@@ -95,33 +117,25 @@ function darBorde() {
     miniImg2.classList.remove("border");
     miniImg3.classList.remove("border");
     miniImg4.classList.remove("border");
-  }
-
-  if (current == 1) {
+  } else if (current == 1) {
     miniImg0.classList.remove("border");
     miniImg1.classList.add("border");
     miniImg2.classList.remove("border");
     miniImg3.classList.remove("border");
     miniImg4.classList.remove("border");
-  }
-
-  if (current == 2) {
+  } else if (current == 2) {
     miniImg0.classList.remove("border");
     miniImg1.classList.remove("border");
     miniImg2.classList.add("border");
     miniImg3.classList.remove("border");
     miniImg4.classList.remove("border");
-  }
-
-  if (current == 3) {
+  } else if (current == 3) {
     miniImg0.classList.remove("border");
     miniImg1.classList.remove("border");
     miniImg2.classList.remove("border");
     miniImg3.classList.add("border");
     miniImg4.classList.remove("border");
-  }
-
-  if (current == 4) {
+  } else if (current == 4) {
     miniImg0.classList.remove("border");
     miniImg1.classList.remove("border");
     miniImg2.classList.remove("border");
