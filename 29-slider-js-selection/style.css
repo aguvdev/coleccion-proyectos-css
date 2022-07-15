@@ -97,17 +97,18 @@ body {
   /* height: 400px; */
 }
 
-.mini-img-container .mini-img0,
-.mini-img-container .mini-img1,
-.mini-img-container .mini-img2,
-.mini-img-container .mini-img3,
-.mini-img-container .mini-img4 {
+.mini-img-container .mini-img {
   border: solid transparent 5px;
   width: 50px;
   height: 50px;
   object-fit: cover;
   cursor: pointer;
   filter: grayscale(1);
+}
+
+.mini-img-container .mini-img.border{
+  border: solid #008DBA 1px;
+  filter: none;
 }
 
 /* -------FIN IMG SECTION-------- */
@@ -134,23 +135,3 @@ body {
 }
 
 /* ---------FIN INFO SECTION--------- */
-
-/* ----------CHECKBOX--------------- */
-
-.checkbox-container input{
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-}
-
-
-.mini-img-container .mini-img0.border,
-.mini-img-container .mini-img1.border,
-.mini-img-container .mini-img2.border,
-.mini-img-container .mini-img3.border,
-.mini-img-container .mini-img4.border {
-  border: solid #008DBA 1px;
-  filter: none;
-}
