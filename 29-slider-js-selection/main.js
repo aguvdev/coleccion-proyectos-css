@@ -16,11 +16,6 @@ const imagenes = [
   },
   {
     img: "paisajes-4.jpg",
-    title: "Puente a la luna",
-    desc: "La luna es el reflejo del mismo sol, asi que es nuestro propio reflejo también."
-  },
-  {
-    img: "paisajes-5.jpg",
     title: "Río del cerezo",
     desc: "Si querés que las buenas vibras se te impregnen, planta un cerezo cerca."
   },
@@ -109,30 +104,20 @@ function darBorde() {
     minisIMAGE[1].classList.remove("border");
     minisIMAGE[2].classList.remove("border");
     minisIMAGE[3].classList.remove("border");
-    minisIMAGE[4].classList.remove("border");
   } else if (current == 1) {
     minisIMAGE[0].classList.remove("border");
     minisIMAGE[1].classList.add("border");
     minisIMAGE[2].classList.remove("border");
     minisIMAGE[3].classList.remove("border");
-    minisIMAGE[4].classList.remove("border");
   } else if (current == 2) {
     minisIMAGE[0].classList.remove("border");
     minisIMAGE[1].classList.remove("border");
     minisIMAGE[2].classList.add("border");
     minisIMAGE[3].classList.remove("border");
-    minisIMAGE[4].classList.remove("border");
   } else if (current == 3) {
     minisIMAGE[0].classList.remove("border");
     minisIMAGE[1].classList.remove("border");
     minisIMAGE[2].classList.remove("border");
     minisIMAGE[3].classList.add("border");
-    minisIMAGE[4].classList.remove("border");
-  } else if (current == 4) {
-    minisIMAGE[0].classList.remove("border");
-    minisIMAGE[1].classList.remove("border");
-    minisIMAGE[2].classList.remove("border");
-    minisIMAGE[3].classList.remove("border");
-    minisIMAGE[4].classList.add("border");
   }
 }
